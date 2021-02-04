@@ -5,11 +5,11 @@
             <img src="<%- theme.root_url %><%=theme.avatar%>" class="animated zoomIn">
         </a>
         <hgroup>
-          <h1 class="header-author"><a href="<%= config.root %>"><%=theme.author%></a></h1>
+          <h1 class="header-author"><a href="<%= config.root %>"><%= theme.author || config.author %></a></h1>
         </hgroup>
 
-        <% if (theme.subtitle){ %>
-        <p class="header-subtitle"><%=theme.subtitle%></p>
+        <% if (theme.subtitle || config.subtitle){ %>
+        <p class="header-subtitle"><%=theme.subtitle || config.subtitle%></p>
         <%}%>
 
         <% if (theme.search.on){ %>
